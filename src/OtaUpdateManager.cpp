@@ -11,7 +11,7 @@ const char* const TAG = "OtaUpdateManager";
 #include "Logging.h"
 #include "SemVer.h"
 #include "serialization/WSGateway.h"
-#include "Time.h"
+#include "OpenShockTime.h"
 #include "util/HexUtils.h"
 #include "util/PartitionUtils.h"
 #include "util/StringUtils.h"

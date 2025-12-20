@@ -4,7 +4,7 @@ const char* const TAG = "HTTPRequestManager";
 
 #include "Common.h"
 #include "Logging.h"
-#include "Time.h"
+#include "OpenShockTime.h"
 #include "util/StringUtils.h"
 
 #include <HTTPClient.h>

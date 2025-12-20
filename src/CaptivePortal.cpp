@@ -1,5 +1,10 @@
 #include <freertos/FreeRTOS.h>
 
+#ifdef __cplusplus
+extern "C" {
+}
+#endif
+
 #include "CaptivePortal.h"
 
 const char* const TAG = "CaptivePortal";
@@ -9,7 +14,7 @@ const char* const TAG = "CaptivePortal";
 #include "config/Config.h"
 #include "GatewayConnectionManager.h"
 #include "Logging.h"
-#include "Time.h"
+#include "OpenShockTime.h"
 
 #include <ESPAsyncWebServer.h>
 #include <WebSocketsServer.h>

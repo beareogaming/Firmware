@@ -26,24 +26,14 @@
     const data = SerializeWifiScanCommand(!isScanning);
     WebSocketClient.Instance.Send(data);
   }
-  function wifiAuthenticate(item: WiFiNetworkGroup) {
-    if (item.security !== WifiAuthMode.Open) {
-      modalStore.trigger({
-        type: 'prompt',
-        title: 'Enter password',
-        body: 'Enter the password for the network',
-        value: '',
-        valueAttr: { type: 'password', minlength: 1, maxlength: 63, required: true },
-        response: (password: string) => {
-          if (!password) return;
-          const data = SerializeWifiNetworkSaveCommand(item.ssid, password, true);
-          WebSocketClient.Instance.Send(data);
-        },
-      });
-    } else {
-      const data = SerializeWifiNetworkSaveCommand(item.ssid, null, true);
-      WebSocketClient.Instance.Send(data);
-    }
+  function wifiAuthenticate(groupKey: string) {
+    modalStore.trigger({
+      type: 'component',
+      component: {
+        ref: WiFiDetails,
+        props: { groupKey, promptPassword: true },
+      },
+    });
   }
   function wifiConnect(item: WiFiNetworkGroup) {
     const data = SerializeWifiNetworkConnectCommand(item.ssid);
@@ -94,7 +84,7 @@
           {#if netgroup.saved}
             <button on:click={() => wifiConnect(netgroup)}><i class="fa fa-arrow-right text-green-500" /></button>
           {:else}
-            <button on:click={() => wifiAuthenticate(netgroup)}><i class="fa fa-link text-green-500" /></button>
+            <button on:click={() => wifiAuthenticate(netgroupKey)}><i class="fa fa-link text-green-500" /></button>
           {/if}
           <button on:click={() => wifiSettings(netgroupKey)}><i class="fa fa-cog" /></button>
         </div>

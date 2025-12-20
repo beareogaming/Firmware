@@ -7,7 +7,7 @@ const char* const TAG = "WiFiManager";
 #include "FormatHelpers.h"
 #include "Logging.h"
 #include "serialization/WSLocal.h"
-#include "Time.h"
+#include "OpenShockTime.h"
 #include "VisualStateManager.h"
 #include "wifi/WiFiNetwork.h"
 #include "wifi/WiFiScanManager.h"

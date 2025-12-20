@@ -1,29 +1,6 @@
 #pragma once
 
-#include <esp_timer.h>
-
-#include <cstdint>
-
-namespace OpenShock {
-  /**
-   * @brief Returns the current time in microseconds
-   *
-   * @return int64_t The current time in microseconds
-   *
-   * @note This function overflows after 292471 years
-   */
-  inline int64_t micros() {
-    return esp_timer_get_time();
-  }
-
-  /**
-   * @brief Returns the current time in milliseconds
-   *
-   * @return int64_t The current time in milliseconds
-   *
-   * @note This function overflows after 292471208 years
-   */
-  inline int64_t millis() {
-    return esp_timer_get_time() / 1000LL;
-  }
-}
+// Forward shim to ensure system C time definitions are available
+// If this file is picked up due to case-insensitive resolution of <time.h>,
+// include the next matching system header and avoid custom definitions here.
+#include_next <time.h>

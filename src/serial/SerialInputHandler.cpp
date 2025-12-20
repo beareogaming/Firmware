@@ -16,7 +16,7 @@ const char* const TAG = "SerialInputHandler";
 #include "serial/command_handlers/index.h"
 #include "serialization/JsonAPI.h"
 #include "serialization/JsonSerial.h"
-#include "Time.h"
+#include "OpenShockTime.h"
 #include "util/Base64Utils.h"
 #include "util/StringUtils.h"
 #include "wifi/WiFiManager.h"

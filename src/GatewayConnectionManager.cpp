@@ -8,7 +8,7 @@ const char* const TAG = "GatewayConnectionManager";
 #include "GatewayClient.h"
 #include "http/JsonAPI.h"
 #include "Logging.h"
-#include "Time.h"
+#include "OpenShockTime.h"
 
 #include <unordered_map>
 

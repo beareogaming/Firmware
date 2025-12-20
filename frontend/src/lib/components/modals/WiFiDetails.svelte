@@ -10,6 +10,7 @@
   const modalStore = getModalStore();
 
   export let groupKey: string;
+  export let promptPassword: boolean = false;
   $: group = $DeviceStateStore.wifiNetworkGroups.get(groupKey);
 
   function GetWifiAuthModeString(type: WifiAuthMode) {
@@ -48,7 +49,7 @@
 
   let password: string | null = null;
   $: validPassword = password && password.length > 0 && password.length <= 63;
-  let showPasswordPrompt = false;
+  let showPasswordPrompt = promptPassword;
 
   function ConnectWiFi() {
     if (!group) return;

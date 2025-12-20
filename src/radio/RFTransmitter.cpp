@@ -8,7 +8,7 @@ const char* const TAG = "RFTransmitter";
 
 #include "Logging.h"
 #include "radio/rmt/MainEncoder.h"
-#include "Time.h"
+#include "OpenShockTime.h"
 #include "util/FnProxy.h"
 #include "util/TaskUtils.h"
 

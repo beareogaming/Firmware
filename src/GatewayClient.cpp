@@ -8,7 +8,7 @@ const char* const TAG = "GatewayClient";
 #include "Logging.h"
 #include "OtaUpdateManager.h"
 #include "serialization/WSGateway.h"
-#include "Time.h"
+#include "OpenShockTime.h"
 #include "util/CertificateUtils.h"
 #include "VisualStateManager.h"
 

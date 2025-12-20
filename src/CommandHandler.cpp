@@ -11,7 +11,7 @@ const char* const TAG = "CommandHandler";
 #include "Logging.h"
 #include "radio/RFTransmitter.h"
 #include "ReadWriteMutex.h"
-#include "Time.h"
+#include "OpenShockTime.h"
 #include "util/TaskUtils.h"
 
 #include <freertos/queue.h>

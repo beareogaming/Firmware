@@ -1,5 +1,10 @@
 #include <freertos/FreeRTOS.h>
 
+#ifdef __cplusplus
+extern "C" {
+}
+#endif
+
 #include "CaptivePortalInstance.h"
 
 const char* const TAG = "CaptivePortalInstance";

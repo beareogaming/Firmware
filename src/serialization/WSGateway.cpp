@@ -4,7 +4,7 @@ const char* const TAG = "WSGateway";
 
 #include "config/Config.h"
 #include "Logging.h"
-#include "Time.h"
+#include "OpenShockTime.h"
 
 using namespace OpenShock::Serialization;
 

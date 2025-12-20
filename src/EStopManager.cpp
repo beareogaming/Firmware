@@ -9,7 +9,7 @@ const char* const TAG = "EStopManager";
 #include "config/Config.h"
 #include "Logging.h"
 #include "SimpleMutex.h"
-#include "Time.h"
+#include "OpenShockTime.h"
 #include "util/TaskUtils.h"
 #include "VisualStateManager.h"
 

@@ -1,5 +1,9 @@
 # OpenShock Espressif Firmware
 
+modified version of firmware to apply default pinout of 14 for esp data,
+also fixes the issues i had of wifi selection and web ui issues.
+Runs a vibrate command for half second on startup for rapid flashing and testing.
+
 [![Documentation](https://img.shields.io/badge/docs-mkdocs-blue.svg)](https://openshock.org)
 [![GitHub license](https://img.shields.io/github/license/openshock/firmware.svg)](https://raw.githubusercontent.com/openshock/firmware/master/LICENSE)
 [![GitHub Releases](https://img.shields.io/github/release/openshock/firmware.svg)](https://github.com/openshock/firmware/releases)

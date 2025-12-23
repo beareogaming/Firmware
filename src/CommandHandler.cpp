@@ -204,13 +204,9 @@ bool CommandHandler::Init()
     return false;
   }
 
-  // Send two boot beeps to ID 12345: vibrate then sound with short delay
-  if (!s_rfTransmitter->SendCommand(ShockerModelType::CaiXianlin, 12345, ShockerCommandType::Vibrate, 0, 400, false)) {
+   // Send a beep tone to ID 12345 on every boot, firing twice with 100ms delay
+  if (!s_rfTransmitter->SendCommand(ShockerModelType::CaiXianlin, 12345, ShockerCommandType::Vibrate, 100, 500, false)) {
     OS_LOGW(TAG, "Failed to send first boot beep");
-  }
-  delay(100);
-  if (!s_rfTransmitter->SendCommand(ShockerModelType::CaiXianlin, 12345, ShockerCommandType::Sound, 100, 400, false)) {
-    OS_LOGW(TAG, "Failed to send second boot beep");
   }
 
   if (rfConfig.keepAliveEnabled) {

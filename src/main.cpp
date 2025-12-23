@@ -77,6 +77,7 @@ void otaSetup()
   OpenShock::OtaUpdateManager::ValidateApp();
 
   OS_LOGI(TAG, "Done validating OTA app");
+
 }
 
 // App setup is the same as normal setup, but we restart if it fails.
